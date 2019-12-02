@@ -132,9 +132,9 @@ Tron signature algorithm is ECDSA, curve used is SECP256K1. Private key is a ran
 <h2> 3.4 Address Format </h2>
 Use the public key P as the input, by SHA3 get the result H. The length of the public key is 64 bytes, SHA3 uses Keccak256. Use the last 20 bytes of H, and add a byte of 0x41 in front of it, then the address come out. Do basecheck to address, here is the final address. All addresses start with 'T'.   
 
-basecheck process: first do sha256 caculation to address to get h1, then do sha256 to h1 to get h2, use the first 4 bytes as check to add it to the end of the address to get address||check, do base58 encode to address||check to get the final result.  
+Basecheck process: first do sha256 caculation to address to get h1, then do sha256 to h1 to get h2, use the first 4 bytes as check to add it to the end of the address to get address||check, do base58 encode to address||check to get the final result.  
 
-character map:  
+Character map:  
 ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"  
 
 <h2> 3.5 Signature </h2>
@@ -149,7 +149,7 @@ Super Representative(abbr: SR) is the block producer in TRON network, there are 
 <h3> 4.1.2 SuperNode Deployment </h3>
 [SuperNode Deployment](https://github.com/tronprotocol/java-tron#running-a-super-representative-node-for-mainnet)
 <h3> 4.1.3 Recommended Hardware Configuration </h3>
-minimum requirement:  
+Minimum requirement:  
 CPU: 16 cores, RAM: 32G, Bandwidth: 100M, Disk: 1T  
 Recommended requirement:  
 CPU: > 64 cores RAM: > 64G, Bandwidth: > 500M, Disk: > 20T
@@ -158,9 +158,9 @@ CPU: > 64 cores RAM: > 64G, Bandwidth: > 500M, Disk: > 20T
 <h3> 4.2.1 FullNode Introduction </h3>
 FullNode has the complete block chain data, can update data in real time. It can broadcast the transactions and provide api service.
 <h3> 4.2.2 FullNode Deployment </h3>
-please refer to [TRON-Deployment](https://github.com/tronprotocol/tron-deployment)
+Please refer to [TRON-Deployment](https://github.com/tronprotocol/tron-deployment)
 <h3> 4.2.3 Recommended Hardware Configuration </h3>
-minimum requirement:    
+Minimum requirement:    
 CPU: 16 cores, RAM: 32G, Bandwidth: 100M, Disk: 1T   
 Recommended requirement:  
 CPU: > 64 cores RAM: > 64G, Bandwidth: > 500M, Disk: > 20T
@@ -169,9 +169,9 @@ CPU: > 64 cores RAM: > 64G, Bandwidth: > 500M, Disk: > 20T
 <h3> 4.3.1 SolidityNode Introduction </h3>
 SolidityNode only synchronize solidified blocks data from the fullNode it specifies, It also provie api service.
 <h3> 4.3.2 SolidityNode Deployment </h3>
-please refer to [TRON-Deployment](https://github.com/tronprotocol/tron-deployment)
+Please refer to [TRON-Deployment](https://github.com/tronprotocol/tron-deployment)
 <h3> 4.3.3 Recommended Hardware Configuration </h3>
-minimum requirement:    
+Minimum requirement:    
 CPU: 16 cores, RAM: 32G, Bandwidth: 100M, Disk: 1T   
 Recommended requirement:  
 CPU: > 64 cores RAM: > 64G, Bandwidth: > 500M, Disk: > 20T
